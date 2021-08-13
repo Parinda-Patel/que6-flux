@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: pari-world
+spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        app: pari-world
+    template:
+      metadata:
+        labels:
+            app: pari-world
+      spec:
+        containers:
+        - name: pari-world
+          image: parinda1108/parinda-image:latest
+          ports:
