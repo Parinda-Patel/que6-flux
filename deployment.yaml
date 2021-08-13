@@ -1,17 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-    name: hello-world
+    name: pari-world
 spec:
     replicas: 3
     selector:
       matchLabels:
-        app: hello-world
+        app: pari-world
     template:
       metadata:
         labels:
-            app: hello-world
+            app: pari-world
       spec:
         containers:
-        - name: hello-world
-          image: parinda-image
+        - name: pari-world
+          image: parinda1108/parinda-image:latest
+          ports:
+          - containerPort: 80
