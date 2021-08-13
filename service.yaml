@@ -7,6 +7,6 @@ spec:
   selector:
     app: pari-world
   ports:
-  - port: 8080
-    protocol: TCP
-    targetPort: 80
+  - port: 80
+    nodeport: 30036
+    targetPort: 8080
